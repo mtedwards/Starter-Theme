@@ -1,0 +1,49 @@
+// Setup
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+// MIXINS
+
+@mixin bp($point) {
+  @if $point == small {
+    @media only screen and (max-width: 400px) { @content; }
+  }
+  @else if $point == med {
+   @media only screen and (max-width: 800px) { @content; }
+  }
+}
+
+
+@mixin cf {
+	&:after{
+		content:"";
+		display: table;
+		clear: both;
+	}
+}
+
+
+// Variables
+
+$max-width: 1000px;
+
+$font-size: 14px;
+
+$small-font-size: 16px;
+
+$padding: $font-size;
+
+$background: #111;
+
+$main-color: #fff;
+
+$header-color: #fff;
+
+$link-color: lightblue;
+
+$feature-color: tomato;
